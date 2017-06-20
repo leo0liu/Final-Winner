@@ -21,7 +21,7 @@ public class BallScript : MonoBehaviour
     void Awake()
     {
         ballRig = GetComponent<Rigidbody>();
-        forcePosition = transform.Find("forcePosition").gameObject;
+        forcePosition = GameObject.Find("forcePosition");
 
     }
 
@@ -33,23 +33,20 @@ public class BallScript : MonoBehaviour
 
     void Update()
     {
+        //当球在击出时需要旋转时
         if (istrue)
         {
-
-
             PauseTimer -= Time.deltaTime;
             if (PauseTimer <= 0)
             {
-
-                for (float i = 0; i < 0.35f; i+=0.05f)
+                for (float i = 0; i < 0.45f; i+=0.05f)
                 {
-
+                    //给弧线的力度
                     ballRig.AddForce(Vector3.back * i, ForceMode.Impulse);
-                  
-                }
-                
+                    transform.Rotate(Vector3.up,35f);
+                }          
             }
-
+            //结束弧线
             EndTimer -= Time.deltaTime;
             if (EndTimer<=0)
             {
@@ -59,13 +56,20 @@ public class BallScript : MonoBehaviour
         }
     }
 
+    //当玩家的脚接触到球的时候
     void OnTriggerEnter(Collider other)
     {
         if (other.name== "Bip001 R Toe0")
         {
            //  ballRig.AddForce(Vector3.left*180,ForceMode.Impulse);
-            ballRig.AddForceAtPosition(Vector3.left*220f,forcePosition.transform.position*100f,ForceMode.Impulse);
-            ballRig.AddForce(Vector3.up*40,ForceMode.Impulse);
+
+            //给一个带有弧度的击球力度
+            ballRig.AddForceAtPosition(Vector3.left*200f,forcePosition.transform.position*100f,ForceMode.Impulse);
+
+            //球击出后给一个向上的力量
+            ballRig.AddForce(Vector3.up*42,ForceMode.Impulse);
+
+            //是否需要弧线
             istrue = true;
             
 
