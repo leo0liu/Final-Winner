@@ -39,7 +39,7 @@ public class BallScript : MonoBehaviour
             PauseTimer -= Time.deltaTime;
             if (PauseTimer <= 0)
             {
-                for (float i = 0; i < 0.45f; i+=0.05f)
+                for (float i = 0; i < 0.5f; i+=0.05f)
                 {
                     //给弧线的力度
                     ballRig.AddForce(Vector3.back * i, ForceMode.Impulse);
@@ -64,15 +64,13 @@ public class BallScript : MonoBehaviour
            //  ballRig.AddForce(Vector3.left*180,ForceMode.Impulse);
 
             //给一个带有弧度的击球力度
-            ballRig.AddForceAtPosition(Vector3.left*200f,forcePosition.transform.position*100f,ForceMode.Impulse);
+            ballRig.AddForceAtPosition(Vector3.left*300f,forcePosition.transform.position*100f,ForceMode.Impulse);
 
             //球击出后给一个向上的力量
-            ballRig.AddForce(Vector3.up*42,ForceMode.Impulse);
+            ballRig.AddForce(Vector3.up*35,ForceMode.Impulse);
 
             //是否需要弧线
             istrue = true;
-            
-
         }
     }
 }

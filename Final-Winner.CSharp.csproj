@@ -107,9 +107,14 @@
     <Compile Include="Assets\NatureScene\Standard Assets\Effects\ImageEffects\Scripts\Twirl.cs" />
     <Compile Include="Assets\NatureScene\Standard Assets\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
     <Compile Include="Assets\NatureScene\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
-    <Compile Include="Assets\Soccer Project\Scripts\player\BallScript.cs" />
-    <Compile Include="Assets\Soccer Project\Scripts\player\FreeKickAnima.cs" />
-    <Compile Include="Assets\Soccer Project\Scripts\player\My_Player.cs" />
+    <Compile Include="Assets\Scripts\GoalKeeper\CatchBall.cs" />
+    <Compile Include="Assets\Scripts\GoalKeeper\GoalKeeper.cs" />
+    <Compile Include="Assets\Scripts\GoalKeeper\GoalKeeperAnimation.cs" />
+    <Compile Include="Assets\Scripts\Mgr\Global.cs" />
+    <Compile Include="Assets\Scripts\Mgr\UIMgr.cs" />
+    <Compile Include="Assets\Scripts\player\BallScript.cs" />
+    <Compile Include="Assets\Scripts\player\FreeKickAnima.cs" />
+    <Compile Include="Assets\Scripts\player\My_Player.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\NatureScene\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />

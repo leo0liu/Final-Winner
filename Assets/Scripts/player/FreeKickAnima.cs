@@ -4,6 +4,8 @@ using System.Collections;
 public class FreeKickAnima : MonoBehaviour {
 
     bool istrue = false;
+
+    //人物移动到踢球点的参照目标点
     GameObject kickPoint;
 
     void  Awake()
@@ -18,18 +20,13 @@ public class FreeKickAnima : MonoBehaviour {
         } 
     }
 
+    //配合跑步动画的位移方法
     void FreeKickMoveAnima() 
     {
         istrue = true;
 
-       // kickPoint= new Vector3(-37.45f, 0f, -1.06f);
-
+        //以目标点为目标位置以恰当的速度配合动画协调的跑到位置上
         transform.position = Vector3.MoveTowards(transform.position, kickPoint.transform.position, 1.9f * Time.deltaTime);      
-
-        if (Vector3.Distance(transform.position, kickPoint.transform.position) < 0.1f)
-        {
-
-        }
 
     }
 }
