@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GoalKeeper : MonoBehaviour {
+public class Goalkeeper : MonoBehaviour {
 
     void Awake()
     {
@@ -15,6 +15,10 @@ public class GoalKeeper : MonoBehaviour {
 	void Update () {
 	
 	}
+    
+    public void Catch()
+    {
 
+    }
  
 }

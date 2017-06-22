@@ -14,10 +14,10 @@ public class FreeKickAnima : MonoBehaviour {
     }
 
 	void Update () {
-        if (istrue)
-        {
+         if (istrue)
+         {
             FreeKickMoveAnima();
-        } 
+       } 
     }
 
     //配合跑步动画的位移方法
@@ -27,6 +27,5 @@ public class FreeKickAnima : MonoBehaviour {
 
         //以目标点为目标位置以恰当的速度配合动画协调的跑到位置上
         transform.position = Vector3.MoveTowards(transform.position, kickPoint.transform.position, 1.9f * Time.deltaTime);      
-
-    }
+   }
 }

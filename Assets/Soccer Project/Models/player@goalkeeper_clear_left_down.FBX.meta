@@ -64,15 +64,15 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleCurves: 1
+    resampleRotations: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
     animationImportWarnings: "\nDefault bone length found in this file is different
       form the one found in the source avatar:\n\t'Bip001 L Thigh' : position error
-      = 1094.666138 mm\n\t'Bip001 R Thigh' : position error = 1762.669312 mm\n\t'Bip001
-      Spine1' : position error = 3.197695 mm\n\t'Bip001 L Clavicle' : position error
-      = 317.251770 mm\n\t'Bip001 R Clavicle' : position error = 317.255798 mm\n\nClip
+      = 1094.666138 mm\n\t'Bip001 R Thigh' : position error = 1762.669922 mm\n\t'Bip001
+      Spine1' : position error = 3.197722 mm\n\t'Bip001 L Clavicle' : position error
+      = 317.251617 mm\n\t'Bip001 R Clavicle' : position error = 317.255951 mm\n\nClip
       'Take 001' has import animation warnings that might lower retargeting quality:\n\t'Bip001
       L Thigh' has translation animation that will be discarded.\n\t'Bip001 L Clavicle'
       has translation animation that will be discarded.\n\t'Bip001 R Clavicle' has
@@ -467,9 +467,8 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: c0a2f670ff70a0440bdd4a5dc8d52872,
-    type: 3}
-  animationType: 3
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
