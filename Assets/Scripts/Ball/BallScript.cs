@@ -27,11 +27,17 @@ public class BallScript : MonoBehaviour
     //球的弧度变量
     public float ballRadian;
 
+    //守门员的位置
+    GameObject goalKeeperTarget;
+
+    //是否看守门员
+    public bool isLookAtKeeper=true;
 
     void Awake()
     {
         ballRig = GetComponent<Rigidbody>();
         forcePosition = GameObject.Find("forcePosition");
+        goalKeeperTarget = GameObject.FindWithTag("GoalKeeper");
 
     }
 
@@ -42,6 +48,10 @@ public class BallScript : MonoBehaviour
 
     void Update()
     {
+        if (isLookAtKeeper) {
+            transform.LookAt(goalKeeperTarget.transform.position);
+            isLookAtKeeper = false;
+        }
         //当球在击出时需要旋转时
         if (istrue)
         {
@@ -88,11 +98,13 @@ public class BallScript : MonoBehaviour
     {
         transform.Rotate(transform.up,2f);
     }
+
    public  void RightRotate()
     {
         transform.Rotate(transform.up, -2f);
     }
-
+    
+    //踢球时,让刚体的冻结解除
     public void RigReset()
     {
         ballRig.constraints = RigidbodyConstraints.None;

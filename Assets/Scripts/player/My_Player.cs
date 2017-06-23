@@ -23,7 +23,6 @@ public class My_Player : MonoBehaviour {
 
     //摄像机
 
-
     void Awake()
     {
         playerCtr = GetComponent<Animator>();
@@ -43,6 +42,7 @@ public class My_Player : MonoBehaviour {
             //按下D键触发踢球动画
             if (Input.GetKeyDown(KeyCode.D))
             {
+                transform.SetParent(playAndBall.transform);
                 Global._instance.ball.RigReset();
                 Global._instance.cameraMgr.cameraPosition.ChangeParent();
                 kickPoint.transform.SetParent(playAndBall.transform);
@@ -57,6 +57,7 @@ public class My_Player : MonoBehaviour {
             //当按下左键时,让人物左移动画开始,让人物已球为轴心开始旋转,让球转动2F
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
+                transform.SetParent(playAndBall.transform);
                 playerCtr.SetTrigger("rightWalk");
                 transform.RotateAround(ball.transform.position, Vector3.up, 3f);
                 Global._instance.ball.LeftRotate();
@@ -71,6 +72,7 @@ public class My_Player : MonoBehaviour {
             //当按下右键时,让人物右移动画开始,让人物已球为轴心开始旋转,让球转动2F
             if (Input.GetKeyDown(KeyCode.RightArrow))
             {
+                transform.SetParent(playAndBall.transform);
                 playerCtr.SetTrigger("leftWalk");
                 transform.RotateAround(ball.transform.position, Vector3.up, -3f);
                 Global._instance.ball.RightRotate();

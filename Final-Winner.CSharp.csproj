@@ -108,6 +108,7 @@
     <Compile Include="Assets\NatureScene\Standard Assets\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
     <Compile Include="Assets\NatureScene\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
     <Compile Include="Assets\Scripts\Ball\BallScript.cs" />
+    <Compile Include="Assets\Scripts\Ball\LoginAnima.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraPosition.cs" />
     <Compile Include="Assets\Scripts\GoalKeeper\CatchBall.cs" />
     <Compile Include="Assets\Scripts\GoalKeeper\GoalKeeper.cs" />
