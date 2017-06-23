@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class Global : MonoBehaviour {
+
     #region 单例
     private static Global inst;
 
@@ -14,8 +15,6 @@ public class Global : MonoBehaviour {
     }
 
     #endregion
-
-    
 
     void Awake()
     {
@@ -34,17 +33,16 @@ public class Global : MonoBehaviour {
         //获取守门员管理
         goalkeeperMgr = gameObject.AddComponent<GoalKeeperMgr>();
         goalkeeperMgr.Inst();
-    
-    }
 
-	//void Start () {
-	
-	//}
-	
-	//void Update () {
-	
-	//}
-    
+        //获取摄像机管理类
+        cameraMgr = gameObject.AddComponent<CameraMgr>();
+        cameraMgr.Inst();
+
+        //获取足球类
+        ball = GameObject.FindWithTag("Ball").GetComponent<BallScript>();
+
+
+    }
 
     //UI管理类
     public UIMgr uiMgr
@@ -60,5 +58,20 @@ public class Global : MonoBehaviour {
 
         private set;
     }
+
+    //摄像机管理类
+    public CameraMgr cameraMgr
+    {
+        get;
+        private set;
+    }
+
+    //足球类
+    public BallScript ball
+    {
+        get;
+        private set;
+    }
+
 
 }

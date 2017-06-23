@@ -3,22 +3,22 @@ using System.Collections;
 
 public class Goalkeeper : MonoBehaviour {
 
-    void Awake()
-    {
+ //   void Awake()
+ //   {
 
-    }
+ //   }
 
-	void Start () {
+	//void Start () {
 	
-	}
+	//}
 	
-	void Update () {
+	//void Update () {
 	
-	}
+	//}
     
-    public void Catch()
-    {
+ //   public void Catch()
+ //   {
 
-    }
+ //   }
  
 }

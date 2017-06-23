@@ -22,13 +22,13 @@ public class GoalKeeperMgr : MonoBehaviour {
         goalKeeperCatchMove = GameObject.FindWithTag("GoalKeeper").GetComponent<GoalKeeperCatchMove>();
     }
 
-    void Start () {
+ //   void Start () {
 	   
-	}
+	//}
 	
-	void Update () {
+	//void Update () {
 	   
-	}
+	//}
       
     // 守门员守门的碰撞检测类
     public CatchBall catchBall       

@@ -9,7 +9,7 @@ public class CatchBall : MonoBehaviour {
     //只触发一次
     bool isTrue = true;
 
-    //让球被接住后保持在守门员的手上
+    //是否让球被接住后保持在守门员的手上
     bool isCatchBall = false;
 
     //守门门员的手指,也就是接球后的父物体
@@ -32,6 +32,8 @@ public class CatchBall : MonoBehaviour {
 	}
 	
 	void Update () {
+
+        //如果守门员接到球以后,让球的位置变在守门员的手上
         if (isCatchBall)
         {
             gameObject.transform.parent = goalKeeperFinger.transform;
@@ -40,7 +42,8 @@ public class CatchBall : MonoBehaviour {
     }
 
     public void OnTriggerEnter(Collider other)
-    {
+    {   
+        //是否在第一次触发后,不再执行其他触发
         if (isTrue) {
 
             if (other.name == "Trigger_Up_Left(1)") //左上拿
@@ -55,20 +58,16 @@ public class CatchBall : MonoBehaviour {
 
             if (other.name == "Trigger_Up_Left (2)") //左上挡
             {
-               // Ball.isTrigger = true;
                 Global._instance.goalkeeperMgr.goalKeeperAnimation.leftUpBlockBall();
                 Global._instance.goalkeeperMgr.goalKeeperCatchMove.CatchMoveLeftBlock();
                 wall.isTrigger = false;
-                // isCatchBall = true;
                 isTrue = false;
             }
 
             if (other.name == "Trigger_Up_Left (3)") //左上扑
             {
-                //Ball.isTrigger = true;
                 Global._instance.goalkeeperMgr.goalKeeperAnimation.leftUpBlockBall();
                 Global._instance.goalkeeperMgr.goalKeeperCatchMove.CatchMoveLeftBlock();
-                //isCatchBall = true;
                 isTrue = false;
             }
 
@@ -83,20 +82,16 @@ public class CatchBall : MonoBehaviour {
 
             if (other.name == "Trigger_Up_right (2)") //右上挡
             {
-              //  Ball.isTrigger = true;
                 Global._instance.goalkeeperMgr.goalKeeperAnimation.RightUpBlock();
                 Global._instance.goalkeeperMgr.goalKeeperCatchMove.CatchMoveRightBlock();
                 wall.isTrigger = false;
-                //isCatchBall = true;
                 isTrue = false;
             }
 
             if (other.name == "Trigger_Up_right (1)") //右上扑
             {
-               // Ball.isTrigger = true;
                 Global._instance.goalkeeperMgr.goalKeeperAnimation.RightUpBlock();
                 Global._instance.goalkeeperMgr.goalKeeperCatchMove.CatchMoveRightBlock();
-               // isCatchBall = true;
                 isTrue = false;
             }
 
@@ -110,20 +105,16 @@ public class CatchBall : MonoBehaviour {
 
             if (other.name == "Trigger_Down_right (4)") //右下扑
             {
-                //Ball.isTrigger = true;
                 Global._instance.goalkeeperMgr.goalKeeperAnimation.RightDownBlock();
                 Global._instance.goalkeeperMgr.goalKeeperCatchMove.CatchMoveRightBlock();
-              //  isCatchBall = true;
                 isTrue = false;
             }
 
             if (other.name == "Trigger_Down_right (5)") //右下挡
             {
-                //Ball.isTrigger = true;
                 Global._instance.goalkeeperMgr.goalKeeperAnimation.RightDownBlock();
                 Global._instance.goalkeeperMgr.goalKeeperCatchMove.CatchMoveRightBlock();
                 wall.isTrigger = false;
-                // isCatchBall = true;
                 isTrue = false;
             }
 
@@ -138,20 +129,16 @@ public class CatchBall : MonoBehaviour {
 
             if (other.name == "Trigger_Down_Left (4)") //左下扑
             {
-                //Ball.isTrigger = true;
                 Global._instance.goalkeeperMgr.goalKeeperAnimation.leftDownBlockBall();
                 Global._instance.goalkeeperMgr.goalKeeperCatchMove.CatchMoveLeftBlock();
-              // isCatchBall = true;
                 isTrue = false;
             }
 
             if (other.name == "Trigger_Down_Left (5)") //左下挡
             {
-                //Ball.isTrigger = true;
                 Global._instance.goalkeeperMgr.goalKeeperAnimation.leftDownBlockBall();
                 Global._instance.goalkeeperMgr.goalKeeperCatchMove.CatchMoveLeftBlock();
                 wall.isTrigger = false;
-               // isCatchBall = true;
                 isTrue = false;
             }
 

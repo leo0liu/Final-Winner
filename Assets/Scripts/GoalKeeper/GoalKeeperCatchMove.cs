@@ -3,20 +3,14 @@ using System.Collections;
 
 public class GoalKeeperCatchMove : MonoBehaviour {
 
+    //此类为守门员守门时的扑球位置类
+
     Rigidbody keeperRig;
     void Awake()
     {
         keeperRig = GetComponent<Rigidbody>();
  
     }
-
-	void Start () {
-	
-	}
-	
-	void Update () {
-	
-	}
     
     //右接球位移
    public void CatchMoveRightPickUp()

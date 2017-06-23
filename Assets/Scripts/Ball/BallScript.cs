@@ -27,6 +27,7 @@ public class BallScript : MonoBehaviour
     //球的弧度变量
     public float ballRadian;
 
+
     void Awake()
     {
         ballRig = GetComponent<Rigidbody>();
@@ -34,10 +35,9 @@ public class BallScript : MonoBehaviour
 
     }
 
-    void Start()
-    {
-     
-    }
+    //void Start()
+    //{
+    //}
 
 
     void Update()
@@ -72,8 +72,8 @@ public class BallScript : MonoBehaviour
         {
            //  ballRig.AddForce(Vector3.left*180,ForceMode.Impulse);
 
-            //给一个带有弧度的击球力度
-            ballRig.AddForceAtPosition(Vector3.left*ballPower,forcePosition.transform.position*100f,ForceMode.Impulse);
+            //给一个带有使球旋转的的击球力度
+            ballRig.AddForceAtPosition(transform.forward*ballPower,forcePosition.transform.position*100f,ForceMode.Impulse);
 
             //球击出后给一个向上的力量
             ballRig.AddForce(Vector3.up*ballHigh,ForceMode.Impulse);
@@ -82,4 +82,20 @@ public class BallScript : MonoBehaviour
             istrue = true;
         }
     }
+
+    //当人物每次移动的时候,球绕Y轴旋转10F
+   public  void LeftRotate()
+    {
+        transform.Rotate(transform.up,2f);
+    }
+   public  void RightRotate()
+    {
+        transform.Rotate(transform.up, -2f);
+    }
+
+    public void RigReset()
+    {
+        ballRig.constraints = RigidbodyConstraints.None;
+    }
+   
 }

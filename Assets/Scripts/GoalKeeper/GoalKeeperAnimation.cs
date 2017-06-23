@@ -3,7 +3,7 @@ using System.Collections;
 
 public class GoalKeeperAnimation : MonoBehaviour {
 
-    //守门员动画系统
+    //守门员动画系统类
   public  Animation GoalKeeperAnima;
 
 
@@ -11,16 +11,6 @@ public class GoalKeeperAnimation : MonoBehaviour {
     {
         GoalKeeperAnima = GetComponent <Animation>();
     }
-
-    //void Start()
-    //{
-        
-    //}
-
-    //void Update()
-    //{
-
-    //}
 
     //中间部位轻松拿到球
     public  void MiddleGetBall()
