@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class My_Player : MonoBehaviour {
+public class My_Player : MonoBehaviour
+{
 
     //踢球动画
     Animator playerCtr;
@@ -21,7 +22,6 @@ public class My_Player : MonoBehaviour {
     //设置支撑脚的父物体
     GameObject playAndBall;
 
-    //摄像机
 
     void Awake()
     {
@@ -31,11 +31,12 @@ public class My_Player : MonoBehaviour {
         playAndBall = GameObject.FindWithTag("playerball");
     }
 
-	//void Start () {
- //   }
-	
+    //void Start () {
+    //   }
 
-	void Update () {
+
+    void Update()
+    {
 
         if (isTrue)
         {
@@ -83,5 +84,6 @@ public class My_Player : MonoBehaviour {
                 //}
             }
         }
-	}
+    }
 }
+

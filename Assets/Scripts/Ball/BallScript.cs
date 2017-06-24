@@ -78,9 +78,8 @@ public class BallScript : MonoBehaviour
     //当玩家的脚接触到球的时候
     void OnTriggerEnter(Collider other)
     {
-        if (other.name== "Bip001 R Toe0")
+        if (other.name== "Bip00RToe0")
         {
-           //  ballRig.AddForce(Vector3.left*180,ForceMode.Impulse);
 
             //给一个带有使球旋转的的击球力度
             ballRig.AddForceAtPosition(transform.forward*ballPower,forcePosition.transform.position*100f,ForceMode.Impulse);

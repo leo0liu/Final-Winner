@@ -107,6 +107,9 @@
     <Compile Include="Assets\NatureScene\Standard Assets\Effects\ImageEffects\Scripts\Twirl.cs" />
     <Compile Include="Assets\NatureScene\Standard Assets\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
     <Compile Include="Assets\NatureScene\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
+    <Compile Include="Assets\Scripts\Audio\AudioGoal.cs" />
+    <Compile Include="Assets\Scripts\Audio\BumpColumn.cs" />
+    <Compile Include="Assets\Scripts\Audio\KickBall.cs" />
     <Compile Include="Assets\Scripts\Ball\BallScript.cs" />
     <Compile Include="Assets\Scripts\Ball\LoginAnima.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraPosition.cs" />
@@ -114,12 +117,17 @@
     <Compile Include="Assets\Scripts\GoalKeeper\GoalKeeper.cs" />
     <Compile Include="Assets\Scripts\GoalKeeper\GoalKeeperAnimation.cs" />
     <Compile Include="Assets\Scripts\GoalKeeper\GoalKeeperCatchMove.cs" />
+    <Compile Include="Assets\Scripts\LoginScripts\LoginScene.cs" />
+    <Compile Include="Assets\Scripts\LoginScripts\LoginTrunOn.cs" />
+    <Compile Include="Assets\Scripts\Mgr\AudioMgr.cs" />
     <Compile Include="Assets\Scripts\Mgr\CameraMgr.cs" />
     <Compile Include="Assets\Scripts\Mgr\Global.cs" />
     <Compile Include="Assets\Scripts\Mgr\GoalKeeperMgr.cs" />
+    <Compile Include="Assets\Scripts\Mgr\PlayerMgr.cs" />
     <Compile Include="Assets\Scripts\Mgr\UIMgr.cs" />
     <Compile Include="Assets\Scripts\player\FreeKickAnima.cs" />
     <Compile Include="Assets\Scripts\player\My_Player.cs" />
+    <Compile Include="Assets\Scripts\player\rightFoot.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\NatureScene\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />

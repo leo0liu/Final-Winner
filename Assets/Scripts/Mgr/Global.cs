@@ -41,7 +41,13 @@ public class Global : MonoBehaviour {
         //获取足球类
         ball = GameObject.FindWithTag("Ball").GetComponent<BallScript>();
 
+        //音效类
+        audioMgr = gameObject.AddComponent<AudioMgr>();
+        audioMgr.Inst();
 
+        ////玩家类
+        playerMgr = gameObject.AddComponent<PlayerMgr>();
+        playerMgr.Inst();
     }
 
     //UI管理类
@@ -73,5 +79,18 @@ public class Global : MonoBehaviour {
         private set;
     }
 
+    ////音效类
+    public AudioMgr audioMgr
+    {
+        get;
+        private set;
+    }
+
+    ////玩家类
+    public PlayerMgr playerMgr
+    {
+        get;
+        private set;
+    }
 
 }
