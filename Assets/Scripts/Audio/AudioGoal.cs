@@ -19,9 +19,9 @@ public class AudioGoal : MonoBehaviour
     //}
     void OnTriggerEnter(Collider other)
     {
-        if (isOne) {
-            if (other.name == "Ball")
-            {
+        if (other.name == "Ball")
+        {
+        if (isOne) { 
                 audioGoal.Play();
             }
             isOne = false;

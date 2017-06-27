@@ -12,7 +12,7 @@ public class BallScript : MonoBehaviour
     //球在击出一刹那没有旋转的飞行时间
     float PauseTimer = 0.001f;
 
-    //球在击出一刹那没有旋转的飞行时间
+    //球在击出一刹那没有旋转的结束时间
     float EndTimer = 0.8f;
 
     //球在击出时,是否让其带有弧度的旋转
@@ -70,6 +70,7 @@ public class BallScript : MonoBehaviour
             if (EndTimer<=0)
             {
                 istrue = false;
+              //  Global._instance.
             }
             
         }

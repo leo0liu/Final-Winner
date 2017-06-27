@@ -6,12 +6,31 @@ public class GoalKeeperCatchMove : MonoBehaviour {
     //此类为守门员守门时的扑球位置类
 
     Rigidbody keeperRig;
+
+    //游戏开始让守门员注视足球
+    GameObject ball;
+
+    //是否让守门员注视足球
+    public bool isLookBall=true;
+
     void Awake()
     {
         keeperRig = GetComponent<Rigidbody>();
+        ball = GameObject.FindWithTag("Ball");
  
     }
+    void Start()
+    {
+        
+    }
     
+    void Update()
+    {
+        if(isLookBall){
+            transform.LookAt(ball.transform.position);
+            isLookBall = false;
+        }
+    } 
     //右接球位移
    public void CatchMoveRightPickUp()
     {

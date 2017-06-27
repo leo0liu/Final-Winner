@@ -45,9 +45,13 @@ public class Global : MonoBehaviour {
         audioMgr = gameObject.AddComponent<AudioMgr>();
         audioMgr.Inst();
 
-        ////玩家类
+        //玩家类
         playerMgr = gameObject.AddComponent<PlayerMgr>();
         playerMgr.Inst();
+
+        //控制踢球位置类
+        choiseMgr = gameObject.AddComponent<ChoiseMgr>();
+        choiseMgr.Inst();
     }
 
     //UI管理类
@@ -86,8 +90,15 @@ public class Global : MonoBehaviour {
         private set;
     }
 
-    ////玩家类
+    //玩家类
     public PlayerMgr playerMgr
+    {
+        get;
+        private set;
+    }
+    
+    //控制踢球位置类
+    public ChoiseMgr choiseMgr
     {
         get;
         private set;

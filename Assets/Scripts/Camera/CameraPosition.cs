@@ -10,7 +10,7 @@ public class CameraPosition : MonoBehaviour {
     GameObject goalKeeper;
 
     //是否保持注视
-    public bool isLookAt = true;
+    bool isLookAt = true;
 
     void Awake()
     {
@@ -18,18 +18,19 @@ public class CameraPosition : MonoBehaviour {
         goalKeeper = GameObject.FindWithTag("GoalKeeper");
     }
 
-    //void Start()
-    //{
-
-    //}
+    void Start()
+    {
+      //  Debug.Log("333");
+      //  transform.LookAt(goalKeeper.transform.position);
+    }
 
     void Update()
     {
         //游戏一开始看着守门员
-        if (isLookAt) {
-            transform.LookAt(goalKeeper.transform.position);
-            isLookAt = false;
-        }
+        //if (isLookAt) {
+        //    transform.LookAt(goalKeeper.transform.position);
+        //    isLookAt = false;
+        //}
     }
 
     //改变自己的父物体

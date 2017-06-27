@@ -16,7 +16,7 @@ public class CatchBall : MonoBehaviour {
     GameObject goalKeeperFinger;
 
     //守门员身后的墙
-    Collider wall;
+   public Collider wall;
 
     SphereCollider Ball;
 
@@ -68,6 +68,7 @@ public class CatchBall : MonoBehaviour {
             {
                 Global._instance.goalkeeperMgr.goalKeeperAnimation.leftUpBlockBall();
                 Global._instance.goalkeeperMgr.goalKeeperCatchMove.CatchMoveLeftBlock();
+                wall.isTrigger = false;
                 isTrue = false;
             }
 
@@ -92,6 +93,7 @@ public class CatchBall : MonoBehaviour {
             {
                 Global._instance.goalkeeperMgr.goalKeeperAnimation.RightUpBlock();
                 Global._instance.goalkeeperMgr.goalKeeperCatchMove.CatchMoveRightBlock();
+                wall.isTrigger = false;
                 isTrue = false;
             }
 
@@ -107,6 +109,7 @@ public class CatchBall : MonoBehaviour {
             {
                 Global._instance.goalkeeperMgr.goalKeeperAnimation.RightDownBlock();
                 Global._instance.goalkeeperMgr.goalKeeperCatchMove.CatchMoveRightBlock();
+                wall.isTrigger = false;
                 isTrue = false;
             }
 
@@ -131,6 +134,7 @@ public class CatchBall : MonoBehaviour {
             {
                 Global._instance.goalkeeperMgr.goalKeeperAnimation.leftDownBlockBall();
                 Global._instance.goalkeeperMgr.goalKeeperCatchMove.CatchMoveLeftBlock();
+                wall.isTrigger = false;
                 isTrue = false;
             }
 
@@ -150,7 +154,6 @@ public class CatchBall : MonoBehaviour {
                 isCatchBall = true;
                 isTrue = false;
             }
-
         }
     }
 
