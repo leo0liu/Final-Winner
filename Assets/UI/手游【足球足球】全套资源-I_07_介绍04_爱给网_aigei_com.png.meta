@@ -1,15 +1,23 @@
 fileFormatVersion: 2
 guid: f7eca3a47a3f0f54e90b78e072796fff
-timeCreated: 1497960556
+timeCreated: 1498792462
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
-  serializedVersion: 2
+  fileIDToRecycleName:
+    21300000: "\u624B\u6E38\u3010\u8DB3\u7403\u8DB3\u7403\u3011\u5168\u5957\u8D44\u6E90-I_07_\u4ECB\u7ECD04_\u7231\u7ED9\u7F51_aigei_com_0"
+    21300002: "\u624B\u6E38\u3010\u8DB3\u7403\u8DB3\u7403\u3011\u5168\u5957\u8D44\u6E90-I_07_\u4ECB\u7ECD04_\u7231\u7ED9\u7F51_aigei_com_1"
+    21300004: "\u624B\u6E38\u3010\u8DB3\u7403\u8DB3\u7403\u3011\u5168\u5957\u8D44\u6E90-I_07_\u4ECB\u7ECD04_\u7231\u7ED9\u7F51_aigei_com_2"
+    21300006: "\u624B\u6E38\u3010\u8DB3\u7403\u8DB3\u7403\u3011\u5168\u5957\u8D44\u6E90-I_07_\u4ECB\u7ECD04_\u7231\u7ED9\u7F51_aigei_com_3"
+    21300008: "\u624B\u6E38\u3010\u8DB3\u7403\u8DB3\u7403\u3011\u5168\u5957\u8D44\u6E90-I_07_\u4ECB\u7ECD04_\u7231\u7ED9\u7F51_aigei_com_4"
+    21300010: "\u624B\u6E38\u3010\u8DB3\u7403\u8DB3\u7403\u3011\u5168\u5957\u8D44\u6E90-I_07_\u4ECB\u7ECD04_\u7231\u7ED9\u7F51_aigei_com_5"
+    21300012: "\u624B\u6E38\u3010\u8DB3\u7403\u8DB3\u7403\u3011\u5168\u5957\u8D44\u6E90-I_07_\u4ECB\u7ECD04_\u7231\u7ED9\u7F51_aigei_com_6"
+    21300014: "\u624B\u6E38\u3010\u8DB3\u7403\u8DB3\u7403\u3011\u5168\u5957\u8D44\u6E90-I_07_\u4ECB\u7ECD04_\u7231\u7ED9\u7F51_aigei_com_7"
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
     mipMapFadeDistanceStart: 1
@@ -21,10 +29,8 @@ TextureImporter:
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 7
-  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 2048
@@ -35,21 +41,154 @@ TextureImporter:
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
-  rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings: []
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
-    sprites: []
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "\u624B\u6E38\u3010\u8DB3\u7403\u8DB3\u7403\u3011\u5168\u5957\u8D44\u6E90-I_07_\u4ECB\u7ECD04_\u7231\u7ED9\u7F51_aigei_com_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 850
+        width: 222
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "\u624B\u6E38\u3010\u8DB3\u7403\u8DB3\u7403\u3011\u5168\u5957\u8D44\u6E90-I_07_\u4ECB\u7ECD04_\u7231\u7ED9\u7F51_aigei_com_1"
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 624
+        width: 104
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "\u624B\u6E38\u3010\u8DB3\u7403\u8DB3\u7403\u3011\u5168\u5957\u8D44\u6E90-I_07_\u4ECB\u7ECD04_\u7231\u7ED9\u7F51_aigei_com_2"
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 624
+        width: 69
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "\u624B\u6E38\u3010\u8DB3\u7403\u8DB3\u7403\u3011\u5168\u5957\u8D44\u6E90-I_07_\u4ECB\u7ECD04_\u7231\u7ED9\u7F51_aigei_com_3"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 668
+        width: 134
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "\u624B\u6E38\u3010\u8DB3\u7403\u8DB3\u7403\u3011\u5168\u5957\u8D44\u6E90-I_07_\u4ECB\u7ECD04_\u7231\u7ED9\u7F51_aigei_com_4"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 239
+        width: 1000
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "\u624B\u6E38\u3010\u8DB3\u7403\u8DB3\u7403\u3011\u5168\u5957\u8D44\u6E90-I_07_\u4ECB\u7ECD04_\u7231\u7ED9\u7F51_aigei_com_5"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 474
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "\u624B\u6E38\u3010\u8DB3\u7403\u8DB3\u7403\u3011\u5168\u5957\u8D44\u6E90-I_07_\u4ECB\u7ECD04_\u7231\u7ED9\u7F51_aigei_com_6"
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 0
+        width: 534
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "\u624B\u6E38\u3010\u8DB3\u7403\u8DB3\u7403\u3011\u5168\u5957\u8D44\u6E90-I_07_\u4ECB\u7ECD04_\u7231\u7ED9\u7F51_aigei_com_7"
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 0
+        width: 4
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 

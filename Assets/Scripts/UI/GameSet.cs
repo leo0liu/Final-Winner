@@ -23,7 +23,10 @@ public class GameSet : MonoBehaviour {
     GameObject choiseBall;
 
     //选择提示语
-    GameObject choisePrompt; 
+    GameObject choisePrompt;
+
+    //选择踢球部位的UI
+    GameObject choisePos;
 
    public void Inst()
     {
@@ -34,6 +37,7 @@ public class GameSet : MonoBehaviour {
         limitWar = GameObject.FindWithTag("LimitWar");
         choiseBall = GameObject.FindWithTag("ChoiseBall");
         choisePrompt = transform.Find("ChoisePrompt").gameObject;
+        choisePos = transform.Find("ChoiseBall").gameObject;
     }
 
 	void Start () {
@@ -65,6 +69,8 @@ public class GameSet : MonoBehaviour {
         Global._instance.ball.isLookAtKeeper=true;
         //让守门员注视足球
         Global._instance.goalkeeperMgr.goalKeeperCatchMove.isLookBall = true;
+        //让选择踢球部位UI显示
+        choisePos.SetActive(true);
     }
 
     //让提示语的颜色渐变
