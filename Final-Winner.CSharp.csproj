@@ -137,6 +137,7 @@
     <Compile Include="Assets\Scripts\Mgr\UIMgr.cs" />
     <Compile Include="Assets\Scripts\UI\ChoiseBalPos.cs" />
     <Compile Include="Assets\Scripts\UI\GameSet.cs" />
+    <Compile Include="Assets\Scripts\UI\SettingView.cs" />
     <Compile Include="Assets\Scripts\player\FreeKickAnima.cs" />
     <Compile Include="Assets\Scripts\player\My_Player.cs" />
     <Compile Include="Assets\Scripts\player\rightFoot.cs" />

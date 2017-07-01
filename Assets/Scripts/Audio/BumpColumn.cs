@@ -13,7 +13,7 @@ public class BumpColumn : MonoBehaviour {
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.other.name=="Ball")
+        if (other.rigidbody.name=="Ball")
         {
             bumpColumn.Play();
         }
