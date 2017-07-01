@@ -49,7 +49,7 @@ public class GameSet : MonoBehaviour {
     }
 
     //当按下任意球设置按钮后
-    void ButtonGameSet()
+   public void ButtonGameSet()
     {
         //二号摄像机失效
         cameraTwo.SetActive(false);
@@ -62,7 +62,7 @@ public class GameSet : MonoBehaviour {
         //提示语失效
         choisePrompt.SetActive(false);
         //选择定位球控制类失效
-        Global._instance.choiseMgr.enabled = false;
+        Global._instance.uiMgr.choiseMgr.enabled = false;
         //自己本身失效
         gameSetSelf.SetActive(false);
         //让足球看着守门员
@@ -71,6 +71,11 @@ public class GameSet : MonoBehaviour {
         Global._instance.goalkeeperMgr.goalKeeperCatchMove.isLookBall = true;
         //让选择踢球部位UI显示
         choisePos.SetActive(true);
+        //让原地重新踢球的按钮显示
+        Global._instance.uiMgr.settingView.originTickGame.SetActive(true);
+        //让重新选择踢球点的按钮显示
+        Global._instance.uiMgr.settingView.choiseTickPositonGame.SetActive(true);
+        Debug.Log(1234);
     }
 
     //让提示语的颜色渐变

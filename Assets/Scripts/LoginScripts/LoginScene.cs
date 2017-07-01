@@ -26,6 +26,6 @@ public class LoginScene : MonoBehaviour
 
     void Login()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
 }

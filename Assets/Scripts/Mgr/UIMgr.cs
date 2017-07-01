@@ -9,9 +9,12 @@ public class UIMgr : MonoBehaviour {
         gameSet.Inst();
         choiseBallPos = GameObject.FindWithTag("LoginCanvas").GetComponent<ChoiseBalPos>();
         settingView = GameObject.FindWithTag("LoginCanvas").GetComponent<SettingView>();
+        //控制踢球位置类
+        choiseMgr = gameObject.AddComponent<ChoiseMgr>();
+        choiseMgr.Inst();
     }
-    
-    //选择任意球位置类
+
+    //设置确认任意球位置类
     public GameSet gameSet
     {
         get;
@@ -32,5 +35,13 @@ public class UIMgr : MonoBehaviour {
         get;
         private set;
     }
+
+    //控制踢球位置类
+    public ChoiseMgr choiseMgr
+    {
+        get;
+        private set;
+    }
+
 
 }

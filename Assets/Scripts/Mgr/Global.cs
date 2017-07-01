@@ -18,7 +18,6 @@ public class Global : MonoBehaviour {
 
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
         inst= this;
         AddScript();
     }
@@ -49,9 +48,7 @@ public class Global : MonoBehaviour {
         playerMgr = gameObject.AddComponent<PlayerMgr>();
         playerMgr.Inst();
 
-        //控制踢球位置类
-        choiseMgr = gameObject.AddComponent<ChoiseMgr>();
-        choiseMgr.Inst();
+       
     }
 
     //UI管理类
@@ -83,7 +80,7 @@ public class Global : MonoBehaviour {
         private set;
     }
 
-    ////音效类
+    //音效类
     public AudioMgr audioMgr
     {
         get;
@@ -97,11 +94,6 @@ public class Global : MonoBehaviour {
         private set;
     }
     
-    //控制踢球位置类
-    public ChoiseMgr choiseMgr
-    {
-        get;
-        private set;
-    }
+  
 
 }

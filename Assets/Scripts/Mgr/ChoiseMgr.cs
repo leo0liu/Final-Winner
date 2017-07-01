@@ -10,11 +10,14 @@ public class ChoiseMgr : MonoBehaviour {
     Camera mainCamera;
 
     //移动主体
-    GameObject choisePosition;
+   public GameObject choisePosition;
 
     private Vector3 target;//目标位置
     private bool isOver = true;//移动是否结束
     public int speed=40;//移动的速度
+
+    //记录一个主罚点的位置,作为原始点重新踢的起始点
+   public  Vector3 orginPoint;
 
     public void Inst()
     {
@@ -26,27 +29,29 @@ public class ChoiseMgr : MonoBehaviour {
 
 
 	void Start () {
-      
+        Inst();
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            //1.获取鼠标点击时的目标位置/目标点
-            //使用射线实现,创建射线
-            // 从摄像机发射一条经过鼠标当前位置的射线
-            Ray ray = cameraTwoCa.ScreenPointToRay(Input.mousePosition);
-            // 发射一条射线
-            RaycastHit hitInfo = new RaycastHit();
-            if (Physics.Raycast(ray, out hitInfo))
+        if (Global._instance.uiMgr.settingView.isSettingView) {
+            if (Input.GetMouseButtonDown(0))
             {
-                //获取碰撞点的位置
-                if (hitInfo.collider.name == "Stadium")
+                //1.获取鼠标点击时的目标位置/目标点
+                //使用射线实现,创建射线
+                // 从摄像机发射一条经过鼠标当前位置的射线
+                Ray ray = cameraTwoCa.ScreenPointToRay(Input.mousePosition);
+                // 发射一条射线
+                RaycastHit hitInfo = new RaycastHit();
+                if (Physics.Raycast(ray, out hitInfo))
                 {
-                    target = hitInfo.point;
-                  //  target.y = 0.5f;
-                    isOver = false;
+                    //获取碰撞点的位置
+                    if (hitInfo.collider.name == "Stadium")
+                    {
+                        target = hitInfo.point;
+                        orginPoint=target;
+                        isOver = false;
+                    }
                 }
             }
         }
@@ -55,7 +60,7 @@ public class ChoiseMgr : MonoBehaviour {
     }
 
     //让角色移动到目标位置
-     private void MoveTo(Vector3 tar)
+     public  void MoveTo(Vector3 tar)
      {
         if (!isOver)
         {
