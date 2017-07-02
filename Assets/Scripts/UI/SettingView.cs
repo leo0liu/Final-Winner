@@ -31,6 +31,18 @@ public class SettingView : MonoBehaviour {
 
     //重新选择主罚点按钮
     Button choiseTickPositionButton;
+
+	//设置音量控件
+	Slider musicSlider;
+
+	//关闭音乐按钮
+	Toggle musicToggle;
+
+	//音量Mgr
+
+	GameObject audioMgr;
+
+
     void Inst()
     {
         settingButton = transform.Find("settingButton").GetComponent<Button>();
@@ -46,6 +58,13 @@ public class SettingView : MonoBehaviour {
         originTickButton.onClick.AddListener(OpenOriginButton);
         choiseTickPositionButton = choiseTickPositonGame.GetComponent<Button>();
         choiseTickPositionButton.onClick.AddListener(OpenChoiseButton);
+
+		musicSlider = transform.Find ("SettingView/MusicSlider").GetComponent<Slider>();
+		musicSlider.onValueChanged.AddListener (delegate (float a){ ControlMusic(a);});
+
+		musicToggle = transform.Find ("SettingView/MusicToggle").GetComponent<Toggle>();
+		musicToggle.onValueChanged.AddListener (delegate (bool a){ControlMusicSwitch( a);});
+		audioMgr = GameObject.FindWithTag ("AudioMgr");
     }
 
 
@@ -90,4 +109,14 @@ public class SettingView : MonoBehaviour {
     {
         //SceneManager.LoadScene(3);
     }
+
+	//控制音量大小
+	void ControlMusic(float a){
+		audioMgr.GetComponent<AudioSource> ().volume = a;
+	}
+
+	//控制音量开关
+	void ControlMusicSwitch(bool a){
+		audioMgr.GetComponent<AudioSource> ().enabled = a;
+	}
 }
