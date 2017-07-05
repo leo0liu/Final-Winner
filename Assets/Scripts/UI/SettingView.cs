@@ -23,6 +23,7 @@ public class SettingView : MonoBehaviour {
 
     //重新原地踢球
     public GameObject originTickGame;
+
     //重新选择主罚点
     public GameObject choiseTickPositonGame;
 
@@ -39,7 +40,6 @@ public class SettingView : MonoBehaviour {
 	Toggle musicToggle;
 
 	//音量Mgr
-
 	GameObject audioMgr;
 
 
@@ -47,15 +47,27 @@ public class SettingView : MonoBehaviour {
     {
         settingButton = transform.Find("settingButton").GetComponent<Button>();
         settingButton.onClick.AddListener(OpenSettingView);
+
+
         settingView = transform.Find("SettingView").gameObject;
+
+
         cancelButton = transform.Find("SettingView/CanceButton").GetComponent<Button>();
         cancelButton.onClick.AddListener(cancelSettingButton);
+
+
         ReturnMenu = transform.Find("SettingView/ReturnButton").GetComponent<Button>();
         ReturnMenu.onClick.AddListener(ReturnMenuButton);
+
+
         originTickGame = transform.Find("OriginTickButton").gameObject;
         choiseTickPositonGame = transform.Find("ChoiseTickPositonButton").gameObject;
+
+
         originTickButton = originTickGame.GetComponent<Button>();
         originTickButton.onClick.AddListener(OpenOriginButton);
+
+
         choiseTickPositionButton = choiseTickPositonGame.GetComponent<Button>();
         choiseTickPositionButton.onClick.AddListener(OpenChoiseButton);
 
@@ -96,18 +108,20 @@ public class SettingView : MonoBehaviour {
         SceneManager.LoadScene(4);
     }
 
-    //当按下原地重新踢球按钮后
+    //当按下原地重新踢球按钮后 
     void OpenOriginButton()
     {
+        
         SceneManager.LoadScene(3);
-       // Global._instance.uiMgr.gameSet.ButtonGameSet();
-       // Global._instance.uiMgr.choiseMgr.choisePosition.transform.position = Global._instance.uiMgr.choiseMgr.orginPoint;
+		MemoryPositon.instance.DoSome();
+ 
     }
 
     //当按下重新选择任意球主罚点按钮后
     void OpenChoiseButton()
     {
-        //SceneManager.LoadScene(3);
+        SceneManager.LoadScene(3);
+
     }
 
 	//控制音量大小

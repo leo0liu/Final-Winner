@@ -1,12 +1,14 @@
-﻿<Properties StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/SettingView.cs">
+﻿<Properties StartupConfiguration="{3C4A2082-2553-18BB-4C90-23653DA02CD8}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Mgr/Global.cs">
     <Files>
-      <File FileName="Assets/Scripts/UI/SettingView.cs" Line="57" Column="66" />
+      <File FileName="Assets/Scripts/Mgr/Global.cs" Line="19" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Final-Winner PreferredExecutionTarget="Unity.Editor" />
+  <MultiItemStartupConfigurations />
 </Properties>

@@ -49,6 +49,7 @@ public class My_Player : MonoBehaviour
                 kickPoint.transform.SetParent(playAndBall.transform);
                 playerCtr.SetTrigger("freeKick");
                 isTrue = false;
+                isOver = false;
             }
         }
 

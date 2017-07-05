@@ -48,6 +48,9 @@ public class Global : MonoBehaviour {
         playerMgr = gameObject.AddComponent<PlayerMgr>();
         playerMgr.Inst();
 
+		//保存上一次任意球位置数据类
+		//memoryPositon = GameObject.FindWithTag ("memoryLocation");
+
        
     }
 
@@ -94,6 +97,10 @@ public class Global : MonoBehaviour {
         private set;
     }
     
-  
+    //保存上一次任意球位置数据类
+	public MemoryPositon memoryPositon {
+		get;
+		private set;
+	}
 
 }

@@ -2,17 +2,42 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class memoryPositon : MonoBehaviour {
-    void Awake()
-    {
+public class MemoryPositon : MonoBehaviour
+{
 
+	//保存上一次的任意球位置
+	public static Vector3 choPositon;
+
+	//任意球的物体
+	GameObject choisePosition;
+
+	public static MemoryPositon instance;
+
+    static MemoryPositon (){
+        GameObject go = new GameObject("MemoryPositon");
+        DontDestroyOnLoad(go);
+        instance = go.AddComponent<MemoryPositon>();
     }
 
-	void Start () {
-		
+
+
+
+    void Awake()
+    {
+       
+       
+    }
+
+    public void DoSome(){
+        Invoke("OiginTick", 0.02f);
+
 	}
-	
-	void Update () {
-		
-	}
+
+    //原地再次踢球的方法
+
+    void OiginTick(){
+        choisePosition = GameObject.FindWithTag("ChoisePositon");
+        choisePosition.transform.position = choPositon;
+        Global._instance.uiMgr.gameSet.ButtonGameSet();
+    }
 }

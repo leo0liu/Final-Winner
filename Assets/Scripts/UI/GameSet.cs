@@ -28,6 +28,9 @@ public class GameSet : MonoBehaviour {
     //选择踢球部位的UI
     GameObject choisePos;
 
+    //任意球的位置
+    GameObject choisePosition;
+
    public void Inst()
     {
         gameSet = transform.Find("GameSet").GetComponent<Button>();
@@ -38,7 +41,8 @@ public class GameSet : MonoBehaviour {
         choiseBall = GameObject.FindWithTag("ChoiseBall");
         choisePrompt = transform.Find("ChoisePrompt").gameObject;
         choisePos = transform.Find("ChoiseBall").gameObject;
-    }
+        choisePosition = GameObject.FindWithTag("ChoisePositon");
+            }
 
 	void Start () {
         gameSet.onClick.AddListener(ButtonGameSet);
@@ -75,7 +79,7 @@ public class GameSet : MonoBehaviour {
         Global._instance.uiMgr.settingView.originTickGame.SetActive(true);
         //让重新选择踢球点的按钮显示
         Global._instance.uiMgr.settingView.choiseTickPositonGame.SetActive(true);
-        Debug.Log(1234);
+        MemoryPositon.choPositon = choisePosition.transform.position;
     }
 
     //让提示语的颜色渐变
