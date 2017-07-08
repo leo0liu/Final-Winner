@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{3C4A2082-2553-18BB-4C90-23653DA02CD8}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Mgr/Global.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/memoryLocation/MemoryPositon.cs">
     <Files>
-      <File FileName="Assets/Scripts/Mgr/Global.cs" Line="19" Column="17" />
+      <File FileName="Assets/Scripts/memoryLocation/MemoryPositon.cs" Line="11" Column="10" />
+      <File FileName="Assets/Scripts/UI/SettingView.cs" Line="117" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

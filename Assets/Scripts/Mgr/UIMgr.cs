@@ -12,6 +12,9 @@ public class UIMgr : MonoBehaviour {
         //控制踢球位置类
         choiseMgr = gameObject.AddComponent<ChoiseMgr>();
         choiseMgr.Inst();
+
+        //道具UI类
+        propUI = GameObject.FindWithTag("LoginCanvas").GetComponent<PropUI>();
     }
 
     //设置确认任意球位置类
@@ -43,5 +46,11 @@ public class UIMgr : MonoBehaviour {
         private set;
     }
 
+	//UI道具类
+	public PropUI propUI
+	{
+		get;
+		private set;
 
+	}
 }

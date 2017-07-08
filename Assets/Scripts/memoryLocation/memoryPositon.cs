@@ -19,22 +19,17 @@ public class MemoryPositon : MonoBehaviour
         instance = go.AddComponent<MemoryPositon>();
     }
 
-
-
-
     void Awake()
     {
        
-       
     }
 
+    //按下原地再次踢球后间隔0.02秒后再运行切换
     public void DoSome(){
         Invoke("OiginTick", 0.02f);
-
 	}
 
     //原地再次踢球的方法
-
     void OiginTick(){
         choisePosition = GameObject.FindWithTag("ChoisePositon");
         choisePosition.transform.position = choPositon;

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class ChoiseMgr : MonoBehaviour {
 
@@ -21,6 +22,7 @@ public class ChoiseMgr : MonoBehaviour {
 
     public void Inst()
     {
+        
         cameraTwo = GameObject.FindWithTag("CameraTwo");
         cameraTwoCa = cameraTwo.GetComponent<Camera>();
         mainCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
